@@ -41,8 +41,8 @@ Output:
 				  Is Removable Media: 'TRUE'
 
 				  Logical Drive:      'F:'
-				  Vendor Id:          ' USB'
-				  Product Id:         ' Sandisk 3.2Gen1'
+				  Vendor Id:          'USB'
+				  Product Id:         'Sandisk 3.2Gen1'
 				  Product Revision:   '1.00'
 				  Serial Number:      '1bfe01028441c112538c'
 				  Is Removable Media: 'TRUE'
