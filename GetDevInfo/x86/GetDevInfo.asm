@@ -63,8 +63,8 @@
 ;; 				  Is Removable Media: 'TRUE'
 ;; 
 ;; 				  Logical Drive:      'F:'
-;; 				  Vendor Id:          'USB'
-;; 				  Product Id:         'Sandisk 3.2Gen1'
+;; 				  Vendor Id:          ' USB'
+;; 				  Product Id:         ' Sandisk 3.2Gen1'
 ;; 				  Product Revision:   '1.00'
 ;; 				  Serial Number:      '1bfe01028441c112538c'
 ;; 				  Is Removable Media: 'TRUE'
@@ -219,7 +219,7 @@ __Startup		proc
 @@:		call @@EmptyDeviceInfo
 			
 			invoke GetPhyDriveInfo, offset g_strDevicePath
-			test 			al, al 
+			test al, al 
 			jz @Next 
 			
 			call @@DumpDeviceInfo
@@ -292,25 +292,25 @@ GetPhyDriveInfo	proc	uses esi edi				\
 			jecxz @F
 			mov 			edi, g_ptrDeviceInfo
 			lea 			edi, [ edi ].DEVICE_INFO.VendorId
-			call @@TrimLeftStrCpy
+			call @@TrimStrCpy
 			
 @@:		mov 			ecx, [ edx ].STORAGE_DEVICE_DESCRIPTOR.ProductIdOffset
 			jecxz @F
 			mov 			edi, g_ptrDeviceInfo
 			lea 			edi, [ edi ].DEVICE_INFO.ProductId
-			call @@TrimLeftStrCpy
+			call @@TrimStrCpy
 
 @@:		mov 			ecx, [ edx ].STORAGE_DEVICE_DESCRIPTOR.ProductRevisionOffset
 			jecxz @F
 			mov 			edi, g_ptrDeviceInfo
 			lea 			edi, [ edi ].DEVICE_INFO.ProductRevision
-			call @@TrimLeftStrCpy
+			call @@TrimStrCpy
 			
 @@:		mov 			ecx, [ edx ].STORAGE_DEVICE_DESCRIPTOR.SerialNumberOffset
 			jecxz @CleanupExitRoutine
 			mov 			edi, g_ptrDeviceInfo
 			lea 			edi, [ edi ].DEVICE_INFO.SerialNumber
-			call @@TrimLeftStrCpy
+			call @@TrimStrCpy
 			
 			mov 			l_bResult, TRUE 
 			
@@ -412,21 +412,31 @@ GetPhyDriveInfo	endp
 			dec 			cx 
 			ret
 
-@@TrimLeftStrCpy:
-			lea 		esi, [ edx + ecx ]
-@@:		mov 		al, [ esi ]
-			test 		al, al
+@@TrimStrCpy:
+			lea 			esi, [ edx + ecx ]
+			mov 			ebx, edi
+			mov 			ah, 20h
+@@:		mov 			al, [ esi ]
+			test al, al
 			jz @F
-			cmp 		al, ' '
+			cmp 			al, ah
 			jnz @F
-			inc 		esi
-			jmp @B
-@@:		mov 		al, [ esi ]
-			test 		al, al
+			inc 			esi
+			jmp @B 
+@@:		mov 			al, [ esi ]
+			test al, al
 			movsb
-			jnz @B
-			ret
-
+			jnz @B 
+			dec 			edi
+@@:		cmp edi, ebx 
+			jbe @F
+			dec 			edi
+			cmp [ edi ], ah
+			jne @F
+			mov 			[ edi ], al
+			jmp @B 
+@@:		ret
+			
 @@GetMem:
 			invoke LocalAlloc, LPTR, eax
 			test 			eax, eax
