@@ -2,9 +2,9 @@
 ;; GetDevInfo.asm
 ;;
 ;; Author:
-;;       Hakan E. Kartal <hek@nula.com.tr>
+;;       Hakan Emre Kartal <hek@nula.com.tr>
 ;;
-;; Copyright (c) 2024 Hakan E. Kartal
+;; Copyright (c) 2024 Hakan Emre Kartal
 ;;
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +38,7 @@
 ;; 
 ;; 		GET DEVICE DRIVER HARDWARE INFO (GetDevInfo), Version 1.0
 ;; 
-;; 		The example program was written by Hakan E. Kartal in 2024 using x86 Assembly
+;; 		The example program was written by Hakan Emre Kartal in 2024 using x86 Assembly
 ;; 		https://github.com/AIntelligent, hek@nula.com.tr
 ;; 
 ;; 				  Logical Drive:      'C:'
@@ -161,7 +161,7 @@ g_strTrue							CHAR 			"TRUE",NULL
 g_strFalse							CHAR 			"FALSE",NULL
 g_strNull							CHAR 			"NULL",NULL
 g_strAbout							CHAR 			"GET DEVICE DRIVER HARDWARE INFO (%s), Version 1.0",LF,CR,LF,CR
-										CHAR 			"The example program was written by Hakan E. Kartal in 2024 using Intel x86 Assembly",LF,CR
+										CHAR 			"The example program was written by Hakan Emre Kartal in 2024 using Intel x86 Assembly",LF,CR
 										CHAR 			"https://github.com/AIntelligent, hek@nula.com.tr",LF,CR,LF,CR,NULL
 g_strReport							CHAR 			TAB,"Drive:              '%s'",LF,CR
 										CHAR 			TAB,"Vendor Id:          '%s'",LF,CR
