@@ -11,8 +11,8 @@ Requirements:
 
   		X64:
 
-    		MS Windows XP64 or better
-      		MASM64
+		MS Windows XP64 or better
+		MASM64
 
 Make It:
 
