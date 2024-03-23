@@ -9,8 +9,15 @@ Requirements:
 
 Make It:
 
+		MASM32:
+
 		ml.exe /c /coff /W0 GetDevInfo.asm 
 		link /MACHINE:X86 /NOLOGO /RELEASE /SUBSYSTEM:CONSOLE GetDevInfo.obj /OUT:GetDevInfo.exe
+
+  		MASM64:
+
+    		ml64.exe /c GetDevInfo.asm
+      		link /SUBSYSTEM:CONSOLE /ENTRY:__Startup /nologo /LARGEADDRESSAWARE GetDevInfo.obj
 		
 Output:
 
