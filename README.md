@@ -4,24 +4,24 @@
 
 Requirements:
 
-		X86:
+	X86:
 
 		MS Windows XP or better
 		MASM32
 
-  		X64:
+  	X64:
 
 		MS Windows XP64 or better
 		MASM64
 
 Make It:
 
-		MASM32:
+	MASM32:
 
 		ml.exe /c /coff /W0 GetDevInfo.asm 
 		link /MACHINE:X86 /NOLOGO /RELEASE /SUBSYSTEM:CONSOLE GetDevInfo.obj /OUT:GetDevInfo.exe
 
-		MASM64:
+	MASM64:
 
 		ml64.exe /c GetDevInfo.asm
   		link /SUBSYSTEM:CONSOLE /ENTRY:__Startup /nologo /LARGEADDRESSAWARE GetDevInfo.obj
