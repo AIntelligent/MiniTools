@@ -52,3 +52,34 @@ Output:
 			  Product Revision:   '1.00'
 			  Serial Number:      '1bfe01028441c112538c'
 			  Is Removable Media: 'TRUE'
+
+# GET LINE COUNT EXTREME (getlcex)
+
+Requirements:
+
+	X86:	MS Windows XP or better
+		MASM32
+
+Make It:
+
+	MASM32:	ml.exe /c /coff /W0 getlcex.asm 
+		link /MACHINE:X86 /NOLOGO /RELEASE /SUBSYSTEM:CONSOLE getlcex.obj /OUT:getlcex.exe
+
+Output:
+
+	GET LINE COUNT EXTREME (getlcex), Version 1.0
+	
+	The example program was written by Hakan E. Kartal in 2024 using Intel x86 Assembly
+	https://github.com/AIntelligent, hek@nula.com.tr
+		
+	Report:
+	
+	        File full path name: 'C:\Temp\WordHunt.log'
+	        File size:           '373713156 bytes'
+	
+	        Lines count:         '4242654 lines'
+	        Elapsed time:        '359 ms'
+	
+	        Thread count:        '6 threads'
+	        Cache buffer length: '1048576 bytes'
+	
