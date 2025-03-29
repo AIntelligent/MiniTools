@@ -2,9 +2,9 @@
 ;; GetDevInfo.asm
 ;;
 ;; Author:
-;;       Hakan Emre Kartal <hek@nula.com.tr>
+;;       Kartal, Hakan Emre <hek@nula.com.tr>
 ;;
-;; Copyright (c) 2024 Hakan Emre Kartal
+;; Copyright (c) 2024 Kartal, Hakan Emre
 ;;
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +38,7 @@
 ;; 
 ;; 		GET DEVICE DRIVER HARDWARE INFO (GetDevInfo), Version 1.0
 ;; 
-;; 		The example program was written by Hakan Emre Kartal in 2024 using Intel x64 Assembly
+;; 		The example program was written by Kartal, Hakan Emre in 2024 using Intel x64 Assembly
 ;; 		https://github.com/AIntelligent, hek@nula.com.tr
 ;; 
 ;; 				  Logical Drive:      'C:'
@@ -154,8 +154,8 @@ g_strAbout							TCHAR  		'G','E','T',' ','D','E','V','I','C','E',' ','D','R','I
 										TCHAR			'H','A','R','D','W','A','R','E',' ','I','N','F','O',' ','(','%','w','s'
 										TCHAR			')',',',' ','V','e','r','s','i','o','n',' ','1','.','0',LF,CR,LF,CR
 										TCHAR			'T','h','e',' ','e','x','a','m','p','l','e',' ','p','r','o','g','r','a'
-										TCHAR 		'm',' ','w','a','s',' ','w','r','i','t','t','e','n',' ','b','y',' ','H'
-										TCHAR			'a','k','a','n',' ','E','m','r','e',' ','K','a','r','t','a','l',' ','i',
+										TCHAR 		'm',' ','w','a','s',' ','w','r','i','t','t','e','n',' ','b','y',' ','K','a','r','t','a','l',',','H'
+										TCHAR			'a','k','a','n',' ','E','m','r','e',' ','i',
 										TCHAR 		'n',' ','2','0','2','4',' ','u','s','i','n','g',' ','I','n','t','e','l',
 										TCHAR 		' ','x','6','4',' ','A','s','s','e','m','b','l','y',LF,CR
 										TCHAR 		'h','t','t','p','s',':','/','/','g','i','t','h','u','b','.','c','o','m'
