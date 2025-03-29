@@ -22,7 +22,7 @@ Output:
 
 	GET DEVICE DRIVER HARDWARE INFO (GetDevInfo), Version 1.0
 
-	The example program was written by Hakan Emre Kartal in 2024 using Intel x86 Assembly
+	The example program was written by Kartal, Hakan Emre in 2024 using Intel x86 Assembly
 	https://github.com/AIntelligent, hek@nula.com.tr
 
 			  Logical Drive:      'C:'
@@ -69,7 +69,7 @@ Output:
 
 	GET LINE COUNT EXTREME (getlcex), Version 1.0
 	
-	The example program was written by Hakan E. Kartal in 2024 using Intel x86 Assembly
+	The example program was written by Kartal, Hakan Emre in 2024 using Intel x86 Assembly
 	https://github.com/AIntelligent, hek@nula.com.tr
 		
 	Report:
