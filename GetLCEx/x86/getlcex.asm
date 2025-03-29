@@ -4,7 +4,7 @@
 ;; Author:
 ;;       Hakan E. Kartal <hek@nula.com.tr>
 ;;
-;; Copyright (c) 2024 Hakan E. Kartal
+;; Copyright (c) 2024 Kartal, Hakan Emre
 ;;
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to deal
@@ -35,7 +35,7 @@
 .data 
 
 g_strAbout							CHAR 					"GET LINE COUNT EXTREME (%s), Version 1.0",LF,CR,LF,CR
-										CHAR 					"The example program was written by Hakan E. Kartal in 2024 using Intel x86 Assembly",LF,CR
+										CHAR 					"The example program was written by Kartal, Hakan Emre in 2024 using Intel x86 Assembly",LF,CR
 										CHAR 					"https://github.com/AIntelligent, hek@nula.com.tr",LF,CR
 g_strEOL								CHAR 					LF,CR,NULL
 
